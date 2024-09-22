@@ -11,37 +11,33 @@ Difficulty : Easy
 using namespace std;
 
 void solve() {
-  int input;
-  cin >> input;
+  int robinGold = 0;
+  int timesRobinGiveOutGold = 0;
 
-  int sum = 0;
-  int count = 0;
-  while (input) {
-    int n;
-    int k;
-    cin >> n >> k;
+  int n;  // number of people
+  int k;  // threshold at which robin hood takes the gold
+  cin >> n >> k;
 
-    int valuePeople;
-    for (int i = 0; i < n; i++) {
-      cin >> valuePeople;
-      if (valuePeople >= k) {
-        sum = sum + valuePeople;
-      } else if (valuePeople == 0) {
-        if (sum != 0) {
-          sum--;
-          count++;
-        }
-      }
+  int gold;
+  for (int i = 0; i < n; i++) {
+    cin >> gold;
+    if (gold >= k) {
+      robinGold = robinGold + gold;
+    } else if (gold == 0 && robinGold != 0) {
+      robinGold--;
+      timesRobinGiveOutGold++;
     }
-    cout << count << endl;
-    sum = 0;
-    count = 0;
-    input--;
   }
+  cout << timesRobinGiveOutGold << endl;
 }
 
 int main() {
-  solve();
+  int t;
+  cin >> t;
+
+  while (t--) {
+    solve();
+  }
 
   return 0;
 }
