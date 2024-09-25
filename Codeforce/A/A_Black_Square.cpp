@@ -22,7 +22,7 @@ void solve() {
 
   for (char c : s) {
     if (c >= '0' && c <= '9') {
-      value = value * 10 + (c - '0');
+      value = c - '0';
     }
 
     if (value == 1) {
