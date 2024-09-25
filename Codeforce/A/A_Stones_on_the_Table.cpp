@@ -2,6 +2,8 @@
 Codeforce : A. Stones on the Table
 Author   : Shah Mrunal Nirajkumar
 Date     : 25 September 2024
+
+Difficulty : Easy
 */
 
 #include <bits\stdc++.h>
