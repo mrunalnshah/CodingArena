@@ -27,7 +27,7 @@ list to change the values.
 
   Step 3:
    nextNode = $3
-   prevNode = nullptr
+   prevNode = $2
     $1         $2      $3      $4       $5
    1, NULL   2, $1   3, $4   4, $5    5, NULL
   and so on...
